@@ -8,6 +8,7 @@ pipeline {
     }
     stage("building") {
       steps {
+        echo $HOME
         echo "Building project"
       }
     }
