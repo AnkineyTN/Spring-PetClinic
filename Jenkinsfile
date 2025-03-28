@@ -3,18 +3,27 @@ pipeline {
   stages {
     stage("checkout") {
       steps {
-        echo "Pulling scm"
+        checkout scm
+        sh '''
+          echo "Checkout SCM Successfully"
+        '''
       }
     }
     stage("building") {
       steps {
         echo $HOME
         echo "Building project"
+        sh '''
+          echo "Build project Successfully"
+        '''
       }
     }
     stage("Test") {
       steps {
         echo "Testing project"
+        sh '''
+          echo "Test Successfully"
+        '''
       }
     }
   }
