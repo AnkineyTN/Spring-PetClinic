@@ -11,7 +11,6 @@ pipeline {
     }
     stage("building") {
       steps {
-        echo $HOME
         echo "Building project"
         sh '''
           echo "Build project Successfully"
